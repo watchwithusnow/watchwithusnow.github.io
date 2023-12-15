@@ -2,26 +2,9 @@
 <html lang="es">
 <head>
 <script type="text/javascript">
-  var timeoutId;
-
-  function abrirAnuncio() {
+  function abrirAnuncio(event) {
+    event.preventDefault();
     window.open('https://www.toprevenuegate.com/yn3t4fk6?key=b265622904b5d42e5bb1d70cfb7fce9d', '_blank');
-    reiniciarTemporizador();
-  }
-
-  function esperarYAbrirAnuncio() {
-    timeoutId = setTimeout(abrirAnuncio, 3000); // 3000 milisegundos = 3 segundos
-  }
-
-  function reiniciarTemporizador() {
-    limpiarTemporizador();
-    esperarYAbrirAnuncio();
-  }
-
-  function limpiarTemporizador() {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
   }
 </script>
   <meta charset="UTF-8">
@@ -180,7 +163,7 @@
 
 </head>
 <body>
-<body onclick="abrirAnuncio();">
+<body onclick="abrirAnuncio(event);">
   <!-- Aquí puedes agregar el contenido de tu página, como un botón u otros elementos -->
   <header>
     <h1>WatchWithUsNow</h1>
