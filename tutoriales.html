@@ -126,6 +126,23 @@ nav a.active:hover::after {
 </section>
 
 
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+
+        // Mostrar una alerta (esto se reemplazará con el envío al servidor posteriormente)
+        alert(`Nombre: ${name}\nMensaje: ${message}`);
+
+        // Limpiar el formulario
+        document.getElementById('contactForm').reset();
+    });
+</script>
+
+
   <!-- Pie de página -->
   <footer>
     <p>Derechos Reservados &copy; 2023 WatchWithUsNow</p>
