@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script type="text/javascript">
-  function abrirAnuncio() {
-    window.open('https://www.toprevenuegate.com/yn3t4fk6?key=b265622904b5d42e5bb1d70cfb7fce9d', '_blank');
-    return false;
-  }
+  <script type="text/javascript">
+    function abrirAnuncio() {
+      window.open('https://www.toprevenuegate.com/yn3t4fk6?key=b265622904b5d42e5bb1d70cfb7fce9d', '_blank');
+      document.body.onclick = null; // Deshabilitar el evento después de abrir el anuncio
+    }
+  </script>
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -242,7 +243,7 @@
      </script>
     </div>
 
-    <div class="cuadro-rojo cuadro-box">
+    <div class="cuadro-rojo cuadro-box" onclick="abrirAnuncio()">
        <div class="contenedor-cuadros">
       <h2>Cookie Netflix #3</h2>
       <textarea class="cuadro-texto" id="cuadro-texto-3" readonly>
