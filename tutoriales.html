@@ -110,34 +110,34 @@
     <a href="tutoriales.html" class="active">Tutoriales</a>
   </nav>
 
-  <form id="miFormulario" action="http://localhost:3000/submit" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="name" required>
+<form id="miFormulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="name" required>
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="message" required></textarea>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="message" required></textarea>
 
-      <button type="submit">Enviar Mensaje</button>
-  </form>
+    <button type="button" onclick="enviarMensaje()">Enviar Mensaje</button>
+</form>
 
-  <script>
-      function enviarMensaje() {
-          const formulario = document.getElementById('miFormulario');
-          const datos = new FormData(formulario);
+<script>
+    function enviarMensaje() {
+        const formulario = document.getElementById('miFormulario');
+        const datos = new FormData(formulario);
 
-          fetch('http://localhost:3000/submit', {
-              method: 'POST',
-              body: datos
-          })
-          .then(response => response.json())
-          .then(data => {
-              alert(data.status);
-          })
-          .catch(error => {
-              console.error('Error al enviar mensaje:', error);
-          });
-      }
-  </script>
+        fetch('https://nombre-de-tu-proyecto.glitch.me/submit', {
+            method: 'POST',
+            body: datos
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.status);
+        })
+        .catch(error => {
+            console.error('Error al enviar mensaje:', error);
+        });
+    }
+</script>
 
   <!-- Pie de página -->
   <footer>
