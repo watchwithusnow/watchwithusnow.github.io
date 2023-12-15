@@ -112,35 +112,17 @@ nav a.active:hover::after {
     <a href="tutoriales.html" class="active">Tutoriales</a>
   </nav>
 
-<section>
-    <h2>Contacto</h2>
-    <form id="contactForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="name" required>
 
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="message" required></textarea>
 
-        <button type="submit">Enviar mensaje</button>
+        <button type="button" onclick="enviarMensaje()">Enviar Mensaje</button>
     </form>
-</section>
 
-
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // Obtener los valores del formulario
-        const name = document.getElementById('name').value;
-        const message = document.getElementById('message').value;
-
-        // Mostrar una alerta (esto se reemplazará con el envío al servidor posteriormente)
-        alert(`Nombre: ${name}\nMensaje: ${message}`);
-
-        // Limpiar el formulario
-        document.getElementById('contactForm').reset();
-    });
-</script>
+    <script src="js/main.js"></script>
 
 
   <!-- Pie de página -->
