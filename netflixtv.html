@@ -200,49 +200,43 @@
 
   <div class="rojo-box">
     <div class="contenedor-cuadros">
-      <form action="https://formspree.io/f/xrgnzgwn" method="POST">
-        <label>
-          Email:
-          <input type="email" name="email">
-        </label>
+<form id="miFormulario">
+  <label>Email:
+    <input type="email" name="email" required>
+  </label>
 
-        <label>
-          Codigo TV:
-          <textarea name="message"></textarea>
-        </label>
+  <label>Mensaje:
+    <textarea name="message" required></textarea>
+  </label>
 
-        <!-- your other form fields go here -->
-        <button id="botonEnviar" type="submit">Enviar</button>
-        <p id="mensaje">Sistema apagado. Vuelve en unas horas.</p>
-      </form>
+  <button type="submit">Enviar</button>
+</form>
     </div>
   </div>
 
+<script>
+  document.getElementById('miFormulario').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-  <script>
-    // Inicialmente, el botón está oculto y el mensaje está visible
-    var mostrarBoton = false;
-    actualizarVisibilidad();
+    const formData = new FormData(this);
+    const jsonData = {};
 
-    function actualizarVisibilidad() {
-      var botonEnviar = document.getElementById('botonEnviar');
-      var mensaje = document.getElementById('mensaje');
+    formData.forEach((value, key) => {
+      jsonData[key] = value;
+    });
 
-      if (mostrarBoton) {
-        botonEnviar.style.display = 'block';
-        mensaje.style.display = 'none';
-      } else {
-        botonEnviar.style.display = 'none';
-        mensaje.style.display = 'block';
-      }
-    }
+    const respuesta = await fetch('http://localhost:3000/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(jsonData),
+    });
 
-    // Función para cambiar la visibilidad desde el código
-    function cambiarVisibilidad(visibilidad) {
-      mostrarBoton = visibilidad;
-      actualizarVisibilidad();
-    }
-  </script>
+    const resultado = await respuesta.json();
+    alert(resultado.mensaje);
+  });
+</script>
 
 
 
