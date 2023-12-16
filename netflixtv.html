@@ -173,6 +173,12 @@
       flex-direction: column;
     }
 
+  input[name="number"] {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 10px; /* Ajusta el espaciado entre los dígitos */
+  }
+
+
 
   </style>
   <script type="text/javascript" src="//pl21744493.toprevenuegate.com/68/ed/06/68ed0661be579665a24bd79b0ec12bd0.js"></script>
@@ -202,15 +208,17 @@
     <div class="contenedor-cuadros">
 <form name="contact" netlify>
   <p>
-    <label>Name <input type="text" name="name" /></label>
+    <label>Name: <input type="text" name="name" required /></label>
   </p>
   <p>
-    <label>Email <input type="email" name="email" /></label>
+    <label>Number (8 digits): <input type="text" name="number" pattern="[0-9]{8}" title="Please enter an 8-digit number" /></label>
   </p>
   <p>
     <button type="submit">Send</button>
   </p>
-</form>    </div>
+</form>
+
+ </div>
   </div>
 
      <script type="text/javascript">
