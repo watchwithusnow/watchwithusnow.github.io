@@ -95,6 +95,69 @@
       transform-origin: bottom left;
     }
 
+    .rojo-box {
+      max-width: 500px;
+      height: 200px;
+      background-color: #414145;
+      border-radius: 50px;
+      display: flex;
+      padding: 30px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.9em;
+      margin: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .rojo1-box {
+      max-width: 600px;
+      height: 200px;
+      background-color: #414145;
+      border-radius: 50px;
+      display: flex;
+      padding: 30px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.9em;
+      margin: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+    .contenedor-cuadros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Espacio entre los cuadros */
+      justify-content: center;
+    }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
   </style>
 </head>
 <body>
@@ -110,27 +173,36 @@
     <a href="tutoriales.html" class="active">Netflix TV</a>
   </nav>
 
+<div class="rojo1-box">
+       <div class="contenedor-cuadros">
+<p> Para tener netflix en tu TV entra a la app de tu tv y dale en ingresar por codigo, luego aqui en el formulario pones un email cualquiera y luego el codigo que sale en tu tv, tratare de activarles a todos los que pueda. </p>
+  </div>
+  </div>
+
+<div class="rojo-box">
+       <div class="contenedor-cuadros">
 <form
   action="https://formspree.io/f/xrgnzgwn"
   method="POST"
 >
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+        <label>
+            Email:
+            <input type="email" name="email">
+        </label>
 
+        <label>
+            Codigo TV:
+            <textarea name="message"></textarea>
+        </label>  <!-- your other form fields go here -->
+  <button type="submit">Enviar</button>
+</form>
+  </div>
+  </div>
 
   <!-- Pie de página -->
   <footer>
     <p>Derechos Reservados &copy; 2023 WatchWithUsNow</p>
   </footer>
-
+  </boby>
 </body>
 </html>
