@@ -105,7 +105,7 @@
 
     .rojo-box {
       max-width: 1000px;
-      height: 200px;
+      height: 300px;
       background-color: #414145;
       border-radius: 50px;
       display: flex;
@@ -115,6 +115,7 @@
       color: #fff;
       font-size: 1.9em;
       margin: 10px;
+      text-align: center;
       transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -136,8 +137,7 @@
 
     .contenedor-cuadros {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px; /* Espacio entre los cuadros */
+      align-items: center;
       justify-content: center;
     }
         label {
@@ -160,11 +160,19 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            align-items: center;
+            margin-top: 10px;
         }
 
         button:hover {
             background-color: #0056b3;
         }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
 
   </style>
   <script type="text/javascript" src="//pl21744493.toprevenuegate.com/68/ed/06/68ed0661be579665a24bd79b0ec12bd0.js"></script>
@@ -190,25 +198,53 @@
   </div>
   </div>
 
-<div class="rojo-box">
-       <div class="contenedor-cuadros">
-<form
-  action="https://formspree.io/f/xrgnzgwn"
-  method="POST"
->
+  <div class="rojo-box">
+    <div class="contenedor-cuadros">
+      <form action="https://formspree.io/f/xrgnzgwn" method="POST">
         <label>
-            Email:
-            <input type="email" name="email">
+          Email:
+          <input type="email" name="email">
         </label>
 
         <label>
-            Codigo TV:
-            <textarea name="message"></textarea>
-        </label>  <!-- your other form fields go here -->
-  <button type="submit">Enviar</button>
-</form>
+          Codigo TV:
+          <textarea name="message"></textarea>
+        </label>
+
+        <!-- your other form fields go here -->
+        <button id="botonEnviar" type="submit">Enviar</button>
+        <p id="mensaje">Sistema apagado. Vuelve en unas horas.</p>
+      </form>
+    </div>
   </div>
-  </div>
+
+
+  <script>
+    // Inicialmente, el botón está oculto y el mensaje está visible
+    var mostrarBoton = false;
+    actualizarVisibilidad();
+
+    function actualizarVisibilidad() {
+      var botonEnviar = document.getElementById('botonEnviar');
+      var mensaje = document.getElementById('mensaje');
+
+      if (mostrarBoton) {
+        botonEnviar.style.display = 'block';
+        mensaje.style.display = 'none';
+      } else {
+        botonEnviar.style.display = 'none';
+        mensaje.style.display = 'block';
+      }
+    }
+
+    // Función para cambiar la visibilidad desde el código
+    function cambiarVisibilidad(visibilidad) {
+      mostrarBoton = visibilidad;
+      actualizarVisibilidad();
+    }
+  </script>
+
+
 
 
      <script type="text/javascript">
