@@ -140,17 +140,30 @@
       align-items: center;
       justify-content: center;
     }
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
         label {
             display: block;
             margin-bottom: 10px;
         }
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
+        input {
+            width: calc(12.5% - 5px); /* 12.5% width for each input with 5px margin */
+            padding: 5px; /* Smaller padding */
+            font-size: 12px; /* Smaller font size */
             box-sizing: border-box;
+            margin-right: 5px; /* Margin between each input */
+        }
+
+        input[name="number"] {
+            width: 100%; /* Full width for the number input */
+            margin-right: 0; /* No margin for the last input */
         }
 
         button {
@@ -158,25 +171,10 @@
             color: #fff;
             padding: 10px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            align-items: center;
-            margin-top: 10px;
         }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-  input[name="number"] {
-    font-family: 'Courier New', monospace;
-    letter-spacing: 10px; /* Ajusta el espaciado entre los dígitos */
-  }
+    </style>
 
 
 
