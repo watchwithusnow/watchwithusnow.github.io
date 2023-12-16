@@ -206,18 +206,21 @@
 
   <div class="rojo-box">
     <div class="contenedor-cuadros">
-<form name="contact" netlify>
-  <p>
-    <label>Name: <input type="text" name="name" required /></label>
-  </p>
-  <p>
-    <label>Number (8 digits): <input type="text" name="number" pattern="[0-9]{8}" title="Please enter an 8-digit number" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-
+    <form name="contact" netlify>
+        <label for="name">Name: <input type="text" name="name" required></label>
+        <label for="number">Number (8 digits):</label>
+        <div>
+            <input type="text" name="digit1" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit2" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit3" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit4" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit5" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit6" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit7" pattern="[0-9]" title="Please enter a digit" required>
+            <input type="text" name="digit8" pattern="[0-9]" title="Please enter a digit" required>
+        </div>
+        <button type="submit">Send</button>
+    </form>
  </div>
   </div>
 
