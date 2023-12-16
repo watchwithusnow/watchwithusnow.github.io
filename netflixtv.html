@@ -200,46 +200,17 @@
 
   <div class="rojo-box">
     <div class="contenedor-cuadros">
-<form id="miFormulario">
-  <label>Email:
-    <input type="email" name="email" required>
-  </label>
+    <form name="contact" method="POST" data-netlify="true">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
 
-  <label>Mensaje:
-    <textarea name="message" required></textarea>
-  </label>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" required>
 
-  <button type="submit">Enviar</button>
-</form>
+        <button type="submit">Enviar</button>
+    </form>
     </div>
   </div>
-
-<script>
-  document.getElementById('miFormulario').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(this);
-    const jsonData = {};
-
-    formData.forEach((value, key) => {
-      jsonData[key] = value;
-    });
-
-    const respuesta = await fetch('http://localhost:3000/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(jsonData),
-    });
-
-    const resultado = await respuesta.json();
-    alert(resultado.mensaje);
-  });
-</script>
-
-
-
 
      <script type="text/javascript">
 	atOptions = {
