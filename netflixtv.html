@@ -199,7 +199,21 @@
 <div class="rojo1-box">
        <div class="contenedor-cuadros">
 <p> Para tener netflix en tu TV entra a la app de tu tv y dale en ingresar por codigo, luego aqui en el formulario pones un email cualquiera y luego el codigo que sale en tu tv, tratare de activarles a todos los que pueda. </p>
-  </div>
+  
+    <form id="miFormulario" action="http://localhost:3000/procesar-formulario" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</div>
   </div>
 
      <script type="text/javascript">
