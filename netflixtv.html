@@ -140,41 +140,42 @@
       align-items: center;
       justify-content: center;
     }
-        form {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-        }
+/* Estilos oscuros para el formulario */
+form {
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 300px;
+}
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
 
-        input {
-            width: calc(12.5% - 5px); /* 12.5% width for each input with 5px margin */
-            padding: 5px; /* Smaller padding */
-            font-size: 12px; /* Smaller font size */
-            box-sizing: border-box;
-            margin-right: 5px; /* Margin between each input */
-        }
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
-        input[name="number"] {
-            width: 100%; /* Full width for the number input */
-            margin-right: 0; /* No margin for the last input */
-        }
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
 
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
 
 
 
@@ -204,8 +205,8 @@
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" required>
         <br>
         <input type="submit" value="Enviar">
       </form>
