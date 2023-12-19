@@ -207,18 +207,56 @@ input[type="submit"]:hover {
 
 <div class="rojo1-box">
  <div class="contenedor-cuadros">
-  <form action="https://mirage-speckle-honeysuckle.glitch.me/formulario" method="post">
-    <label for="nombre">Nombre:</label>
-     <input type="text" id="nombre" name="nombre" required>
-      <br>
-       <label for="numero">Code Netflix TV:</label>
-        <input type="text" id="numero" name="numero" required>
-         <br>
-         <input type="submit" value="Enviar">
-          </form>
+<form id="miFormulario" action="https://mirage-speckle-honeysuckle.glitch.me/formulario" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  <br>
+  <label for="numero">Code Netflix TV:</label>
+  <input type="text" id="numero" name="numero" required>
+  <br>
+
+  <!-- Botón y texto con lógica de visibilidad -->
+  <div id="contenedorBoton">
+    <input type="submit" value="Enviar" id="botonEnviar">
+    <p id="textoApagado" style="display: none;">Sistema apagado. Vuelve pronto.</p>
+  </div>
+</form>
+
  </div>
 </div>
 
+<script>
+  // Definir el estado del sistema (true = encendido, false = apagado)
+  var sistemaEncendido = true;
+
+  // Función para cambiar el estado del sistema
+  function cambiarEstadoSistema(nuevoEstado) {
+    sistemaEncendido = nuevoEstado;
+    actualizarInterfaz();
+  }
+
+  // Función para actualizar la interfaz según el estado del sistema
+  function actualizarInterfaz() {
+    var contenedorBoton = document.getElementById("contenedorBoton");
+    var botonEnviar = document.getElementById("botonEnviar");
+    var textoApagado = document.getElementById("textoApagado");
+
+    if (sistemaEncendido) {
+      contenedorBoton.style.display = "block"; // Mostrar contenedor
+      botonEnviar.style.display = "inline-block"; // Mostrar botón
+      textoApagado.style.display = "none"; // Ocultar texto
+    } else {
+      contenedorBoton.style.display = "block"; // Mostrar contenedor
+      botonEnviar.style.display = "none"; // Ocultar botón
+      textoApagado.style.display = "block"; // Mostrar texto
+    }
+  }
+
+  // Inicializar la interfaz al cargar la página
+  window.onload = function() {
+    actualizarInterfaz();
+  };
+</script>
 
 
 
@@ -235,6 +273,7 @@ input[type="submit"]:hover {
 
 <script async="async" data-cfasync="false" src="//pl21744508.toprevenuegate.com/12b6975cb6ab27a7db1803091043b1c2/invoke.js"></script>
 <div id="container-12b6975cb6ab27a7db1803091043b1c2"></div>
+
 
 
   <!-- Pie de página -->
