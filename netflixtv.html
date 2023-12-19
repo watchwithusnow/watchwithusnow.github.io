@@ -221,7 +221,7 @@ input[type="submit"]:hover {
 
   <!-- Botón y texto con lógica de visibilidad -->
   <div id="contenedorBoton">
-    <input type="submit" value="Enviar" id="botonEnviar">
+    <input type="submit" value="Enviar" id="botonEnviar" disabled>
     <p id="textoApagado" style="display: none;">Sistema apagado. Vuelve pronto.</p>
   </div>
 </form>
@@ -249,10 +249,12 @@ input[type="submit"]:hover {
       contenedorBoton.style.display = "block"; // Mostrar contenedor
       botonEnviar.style.display = "inline-block"; // Mostrar botón
       textoApagado.style.display = "none"; // Ocultar texto
+      botonEnviar.disabled = false; // Habilitar el botón
     } else {
       contenedorBoton.style.display = "block"; // Mostrar contenedor
       botonEnviar.style.display = "none"; // Ocultar botón
       textoApagado.style.display = "block"; // Mostrar texto
+      botonEnviar.disabled = true; // Deshabilitar el botón
     }
   }
 
