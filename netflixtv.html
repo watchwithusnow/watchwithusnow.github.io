@@ -222,7 +222,7 @@ input[type="submit"]:hover {
   <!-- Botón y texto con lógica de visibilidad -->
   <div id="contenedorBoton">
     <input type="submit" value="Enviar" id="botonEnviar" disabled>
-    <p id="textoApagado" style="display: none;">Sistema apagado. Vuelve pronto.</p>
+    <p id="textoApagado" style="display: none;">Sistema en mantenimiento. Vuelve pronto.</p>
   </div>
 </form>
 
@@ -231,7 +231,7 @@ input[type="submit"]:hover {
 
 <script>
   // Definir el estado del sistema (true = encendido, false = apagado)
-  var sistemaEncendido = true;
+  var sistemaEncendido = false;
 
   // Función para cambiar el estado del sistema
   function cambiarEstadoSistema(nuevoEstado) {
