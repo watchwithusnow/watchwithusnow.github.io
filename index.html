@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script type="text/javascript">
-  function abrirAnuncio() {
-    // Espera 3 segundos antes de abrir la nueva ventana
-    setTimeout(function() {
-      window.open('https://www.toprevenuegate.com/yn3t4fk6?key=b265622904b5d42e5bb1d70cfb7fce9d', '_blank');
-    }, 3000); // 3000 milisegundos = 3 segundos
-  }
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WatchWithUsNow</title>
@@ -228,8 +220,6 @@
 </head>
 <body>
 
-  <body onclick="abrirAnuncio();">
-
   <!-- Sección del encabezado con el título principal -->
   <header>
     <h1>Bienvenido a WatchWithUsNow</h1>
@@ -243,80 +233,26 @@
     <a href="netflixtv.html">Netflix TV</a>
   </nav>
 
-  <p>¡Aquí encontrarás las cuentas que compartimos!</p>
-
-  <div class="container">
-
-    <a href="netflix.html">
-      <div class="rojo-box">
-        <div class="centrado">
-      <h2>COOKIES NETFLIX</h2>
-        </div>
-      </div>
-    </a>
-
-   <div class="rojo1-box">
-     <script type="text/javascript">
-	atOptions = {
-		'key' : '086968e63de47be22d86d601481bf2db',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/086968e63de47be22d86d601481bf2db/invoke.js"></scr' + 'ipt>');
-</script>             
-    </div>
 
 
-    <a href="prime.html">
-      <div class="rojo-box">
-        <div class="centrado">
-      <h2>COOKIES PRIMEVIDEO</h2>
-        </div>
-      </div>
-    </a>
-
-   <div class="rojo1-box">
-     <script type="text/javascript">
-	atOptions = {
-		'key' : '086968e63de47be22d86d601481bf2db',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/086968e63de47be22d86d601481bf2db/invoke.js"></scr' + 'ipt>');
-</script>             
-    </div>
 
 
-    <a href="netflixtv.html">
-      <div class="rojo-box">
-        <div class="centrado">
-      <h2>NETFLIX TV POR CODIGO</h2>
-        </div>
-      </div>
-    </a>
-
-   <div class="rojo1-box">
-     <script type="text/javascript">
-	atOptions = {
-		'key' : '086968e63de47be22d86d601481bf2db',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/086968e63de47be22d86d601481bf2db/invoke.js"></scr' + 'ipt>');
-</script>             
-    </div>
 
 
-  </div>
+<script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+<script>
+  const socket = io();
+  
+  $('form').submit(function () {
+    socket.emit('chat message', $('#m').val());
+    $('#m').val('');
+    return false;
+  });
 
-
-  </body>
+  socket.on('chat message', function (msg) {
+    $('#messages').append($('<li>').text(msg));
+  });
+</script>
 
 <script async="async" data-cfasync="false" src="//pl21744508.toprevenuegate.com/12b6975cb6ab27a7db1803091043b1c2/invoke.js"></script>
 <div id="container-12b6975cb6ab27a7db1803091043b1c2"></div>
