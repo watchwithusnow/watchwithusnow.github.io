@@ -60,10 +60,15 @@ section p {
   border-radius: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .feature {
     flex: 1;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
     padding: 20px;
     margin: 10px;
     background-color: #333;
