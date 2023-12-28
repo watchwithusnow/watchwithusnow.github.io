@@ -68,6 +68,61 @@
         <h2>Netflix TV</h2>
         <p>Explora y disfruta de nuestro servicio de NetflixTV...</p>
         
+
+
+<form id="miFormulario" action="https://mirage-speckle-honeysuckle.glitch.me/formulario" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  <br>
+  <label for="numero">Code Netflix TV:</label>
+  <input type="text" id="numero" name="numero" required>
+  <br>
+
+  <!-- Botón y texto con lógica de visibilidad -->
+  <div id="contenedorBoton">
+    <input type="submit" value="Enviar" id="botonEnviar" disabled>
+    <p id="textoApagado" style="display: none;">Sistema en mantenimiento. Vuelve pronto.</p>
+  </div>
+</form>
+
+
+<script>
+  // Definir el estado del sistema (true = encendido, false = apagado)
+  var sistemaEncendido = false;
+
+  // Función para cambiar el estado del sistema
+  function cambiarEstadoSistema(nuevoEstado) {
+    sistemaEncendido = nuevoEstado;
+    actualizarInterfaz();
+  }
+
+  // Función para actualizar la interfaz según el estado del sistema
+  function actualizarInterfaz() {
+    var contenedorBoton = document.getElementById("contenedorBoton");
+    var botonEnviar = document.getElementById("botonEnviar");
+    var textoApagado = document.getElementById("textoApagado");
+
+    if (sistemaEncendido) {
+      contenedorBoton.style.display = "block"; // Mostrar contenedor
+      botonEnviar.style.display = "inline-block"; // Mostrar botón
+      textoApagado.style.display = "none"; // Ocultar texto
+      botonEnviar.disabled = false; // Habilitar el botón
+    } else {
+      contenedorBoton.style.display = "block"; // Mostrar contenedor
+      botonEnviar.style.display = "none"; // Ocultar botón
+      textoApagado.style.display = "block"; // Mostrar texto
+      botonEnviar.disabled = true; // Deshabilitar el botón
+    }
+  }
+
+  // Inicializar la interfaz al cargar la página
+  window.onload = function() {
+    actualizarInterfaz();
+  };
+</script>
+
+
+
         <!-- Contenido específico de la página Chat -->
     </section>
 
