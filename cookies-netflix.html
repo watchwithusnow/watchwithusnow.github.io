@@ -6,9 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WatchWithUsNow - Cookies Netflix</title>
     <link rel="icon" href="majano.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="styles.css">
-
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #fff; /* Texto blanco */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            border-bottom: 2px solid #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; /* Quita el subrayado */
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 30px 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        section h2 {
+            color: #f39c12; /* Amarillo */
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 20px auto;
+            color: #ccc;
+        }
+
+        .features {
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature {
+            flex: 1;
+            max-width: 250px;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #333;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        /* Media queries para dispositivos móviles */
+        @media (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+
+            .features {
+                display: flex;
+                flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben en el ancho de la pantalla */
+                justify-content: center;
+            }
+
+            .feature {
+                width: 100%;
+            }
+        }
+
         /* Pegar aquí el código CSS del h2 */
         h2 {
             font-size: 2.5em;
@@ -47,17 +152,50 @@
             transform: scaleX(1);
         }
         /* Fin del código CSS del h2 */
-    </style>
 
+        .cuadro-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cuadro {
+            flex: 1;
+            max-width: 300px; /* Puedes ajustar este valor según tus necesidades */
+            margin: 15px;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .cuadro textarea {
+            width: 100%;
+            height: 150px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            resize: none;
+        }
+
+        .cuadro button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-   <a href="index.html">
-    <header>
-        <h2>WatchWithUsNow</h2>
-    </header>
+    <a href="index.html">
+        <header>
+            <h2>WatchWithUsNow</h2>
+        </header>
     </a>
 
-    
     <nav>
         <a href="index.html">Inicio</a>
         <a href="chat.html">Chat</a>
@@ -69,97 +207,90 @@
     <section>
         <h2>Cookies Netflix</h2>
         <p>Explora y disfruta de nuestro servicio de cookies Netflix...</p>
-        
 
-    <div class="cuadro">
-        <h2>COOKIE 1</h2>
-        <textarea id="cuadro1" readonly>TEXTO COPIABLE 1</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro1" onclick="copiarTexto('cuadro1')">Copiar Texto</button>
-    </div>
+        <div class="cuadro-container">
+            <div class="cuadro">
+                <h2>COOKIE 1</h2>
+                <textarea id="cuadro1" readonly>TEXTO COPIABLE 1</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro1" onclick="copiarTexto('cuadro1')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 2</h2>
-        <textarea id="cuadro2" readonly>TEXTO COPIABLE 2</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro2" onclick="copiarTexto('cuadro2')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 2</h2>
+                <textarea id="cuadro2" readonly>TEXTO COPIABLE 2</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro2" onclick="copiarTexto('cuadro2')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 3</h2>
-        <textarea id="cuadro3" readonly>TEXTO COPIABLE 3</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro3" onclick="copiarTexto('cuadro3')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 3</h2>
+                <textarea id="cuadro3" readonly>TEXTO COPIABLE 3</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro3" onclick="copiarTexto('cuadro3')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 4</h2>
-        <textarea id="cuadro4" readonly>TEXTO COPIABLE 4</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro4" onclick="copiarTexto('cuadro4')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 4</h2>
+                <textarea id="cuadro4" readonly>TEXTO COPIABLE 4</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro4" onclick="copiarTexto('cuadro4')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 5</h2>
-        <textarea id="cuadro5" readonly>TEXTO COPIABLE 5</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro5" onclick="copiarTexto('cuadro5')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 5</h2>
+                <textarea id="cuadro5" readonly>TEXTO COPIABLE 5</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro5" onclick="copiarTexto('cuadro5')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 6</h2>
-        <textarea id="cuadro6" readonly>TEXTO COPIABLE 6</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro6" onclick="copiarTexto('cuadro6')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 6</h2>
+                <textarea id="cuadro6" readonly>TEXTO COPIABLE 6</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro6" onclick="copiarTexto('cuadro6')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 7</h2>
-        <textarea id="cuadro7" readonly>TEXTO COPIABLE 7</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro7" onclick="copiarTexto('cuadro7')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 7</h2>
+                <textarea id="cuadro7" readonly>TEXTO COPIABLE 7</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro7" onclick="copiarTexto('cuadro7')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 8</h2>
-        <textarea id="cuadro8" readonly>TEXTO COPIABLE 8</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro8" onclick="copiarTexto('cuadro8')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 8</h2>
+                <textarea id="cuadro8" readonly>TEXTO COPIABLE 8</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro8" onclick="copiarTexto('cuadro8')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 9</h2>
-        <textarea id="cuadro9" readonly>TEXTO COPIABLE 9</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro9" onclick="copiarTexto('cuadro9')">Copiar Texto</button>
-    </div>
+            <div class="cuadro">
+                <h2>COOKIE 9</h2>
+                <textarea id="cuadro9" readonly>TEXTO COPIABLE 9</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro9" onclick="copiarTexto('cuadro9')">Copiar Texto</button>
+            </div>
 
-    <div class="cuadro">
-        <h2>COOKIE 10</h2>
-        <textarea id="cuadro10" readonly>TEXTO COPIABLE 10</textarea>
-        <button class="btnCopiar" data-clipboard-target="#cuadro10" onclick="copiarTexto('cuadro10')">Copiar Texto</button>
-    </div>
-
-    <script>
-        new ClipboardJS('.btnCopiar');
-
-        function copiarTexto(idCuadro) {
-            var cuadroTexto = document.getElementById(idCuadro).querySelector("textarea");
-            cuadroTexto.select();
-            
-            try {
-                var exito = document.execCommand('copy');
-                var mensaje = exito ? 'Texto copiado al portapapeles con éxito' : 'Fallo al copiar texto';
-                console.log(mensaje);
-                alert(mensaje);
-            } catch (err) {
-                console.error('Error al intentar copiar: ', err);
-            }
-            
-            window.getSelection().removeAllRanges();
-        }
-    </script>
-</body>
-</html>
-
-
-
+            <div class="cuadro">
+                <h2>COOKIE 10</h2>
+                <textarea id="cuadro10" readonly>TEXTO COPIABLE 10</textarea>
+                <button class="btnCopiar" data-clipboard-target="#cuadro10" onclick="copiarTexto('cuadro10')">Copiar Texto</button>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2023 WatchWithUsNow. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        new ClipboardJS('.btnCopiar');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var clipboard = new ClipboardJS('.btnCopiar');
+
+            clipboard.on('success', function (e) {
+                console.info('Texto copiado:', e.text);
+                alert('Texto copiado al portapapeles con éxito');
+            });
+
+            clipboard.on('error', function (e) {
+                console.error('Error al intentar copiar:', e.action);
+            });
+        });
+    </script>
+
 </body>
 </html>
-
