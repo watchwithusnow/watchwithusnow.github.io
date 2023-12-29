@@ -69,7 +69,91 @@
         <h2>Cookies Netflix</h2>
         <p>Explora y disfruta de nuestro servicio de cookies Netflix...</p>
         
-        <!-- Contenido específico de la página Chat -->
+
+    <div class="cuadro">
+        <h2>COOKIE 1</h2>
+        <textarea id="cuadro1" readonly>TEXTO COPIABLE 1</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro1" onclick="copiarTexto('cuadro1')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 2</h2>
+        <textarea id="cuadro2" readonly>TEXTO COPIABLE 2</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro2" onclick="copiarTexto('cuadro2')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 3</h2>
+        <textarea id="cuadro3" readonly>TEXTO COPIABLE 3</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro3" onclick="copiarTexto('cuadro3')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 4</h2>
+        <textarea id="cuadro4" readonly>TEXTO COPIABLE 4</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro4" onclick="copiarTexto('cuadro4')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 5</h2>
+        <textarea id="cuadro5" readonly>TEXTO COPIABLE 5</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro5" onclick="copiarTexto('cuadro5')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 6</h2>
+        <textarea id="cuadro6" readonly>TEXTO COPIABLE 6</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro6" onclick="copiarTexto('cuadro6')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 7</h2>
+        <textarea id="cuadro7" readonly>TEXTO COPIABLE 7</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro7" onclick="copiarTexto('cuadro7')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 8</h2>
+        <textarea id="cuadro8" readonly>TEXTO COPIABLE 8</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro8" onclick="copiarTexto('cuadro8')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 9</h2>
+        <textarea id="cuadro9" readonly>TEXTO COPIABLE 9</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro9" onclick="copiarTexto('cuadro9')">Copiar Texto</button>
+    </div>
+
+    <div class="cuadro">
+        <h2>COOKIE 10</h2>
+        <textarea id="cuadro10" readonly>TEXTO COPIABLE 10</textarea>
+        <button class="btnCopiar" data-clipboard-target="#cuadro10" onclick="copiarTexto('cuadro10')">Copiar Texto</button>
+    </div>
+
+    <script>
+        new ClipboardJS('.btnCopiar');
+
+        function copiarTexto(idCuadro) {
+            var cuadroTexto = document.getElementById(idCuadro).querySelector("textarea");
+            cuadroTexto.select();
+            
+            try {
+                var exito = document.execCommand('copy');
+                var mensaje = exito ? 'Texto copiado al portapapeles con éxito' : 'Fallo al copiar texto';
+                console.log(mensaje);
+                alert(mensaje);
+            } catch (err) {
+                console.error('Error al intentar copiar: ', err);
+            }
+            
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</body>
+</html>
+
+
+
     </section>
 
     <footer>
