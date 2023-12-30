@@ -29,127 +29,124 @@
     <title>WatchWithUsNow - Cuentas</title>
     <link rel="icon" href="majano.jpg" type="image/jpeg">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #fff; /* Texto blanco */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
 
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            border-bottom: 2px solid #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
+        nav a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; /* Quita el subrayado */
+            transition: background-color 0.3s;
+        }
 
-nav {
-    background-color: #444;
-    overflow: hidden;
-    border-bottom: 2px solid #555;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        nav a:hover {
+            background-color: #555;
+        }
 
-nav a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none; /* Quita el subrayado */
-    transition: background-color 0.3s;
-}
+        section {
+            padding: 30px 20px;
+            text-align: center;
+            flex: 1;
+        }
 
-nav a:hover {
-    background-color: #555;
-}
+        section h2 {
+            color: #f39c12; /* Amarillo */
+        }
 
-section {
-    padding: 30px 20px;
-    text-align: center;
-    flex: 1;
-}
+        section p {
+            max-width: 800px;
+            margin: 20px auto;
+            color: #ccc;
+        }
 
-section h2 {
-    color: #f39c12; /* Amarillo */
-}
+        .features {
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-section p {
-    max-width: 800px;
-    margin: 20px auto;
-    color: #ccc;
-}
+        .feature {
+            flex: 1;
+            max-width: 250px;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #333;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
 
-.features {
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        .feature {
+            flex: 1;
+            width: auto; /* Anchura automática basada en el contenido */
+            height: auto; /* Altura automática basada en el contenido */
+            padding: 20px;
+            margin: 10px;
+            background-color: #333;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
 
-.feature {
-    flex: 1;
-    max-width: 250px;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #333;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
+        .feature:hover {
+            transform: scale(1.05);
+        }
 
-.feature {
-    flex: 1;
-    width: auto; /* Anchura automática basada en el contenido */
-    height: auto; /* Altura automática basada en el contenido */
-    padding: 20px;
-    margin: 10px;
-    background-color: #333;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
 
+        /* Media queries para dispositivos móviles */
+        @media (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
 
+            .features {
+                display: flex;
+                flex-direction: column;
+            }
 
-.feature:hover {
-    transform: scale(1.05);
-}
+            .feature {
+                width: 100%;
+            }
+        }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
-
-/* Media queries para dispositivos móviles */
-@media (max-width: 600px) {
-    nav a {
-        float: none;
-        width: 100%;
-    }
-
-    .features {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .feature {
-        width: 100%;
-    }
-}
         /* Pegar aquí el código CSS del h2 */
         h2 {
             font-size: 2.5em;
@@ -188,53 +185,53 @@ footer {
             transform: scaleX(1);
         }
         /* Fin del código CSS del h2 */
-/* Estilo para los formularios */
-form {
-    max-width: 400px;
-    margin: auto; /* Centrar el formulario horizontalmente */
-    background: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        /* Estilo para los formularios */
+        form {
+            max-width: 400px;
+            margin: auto; /* Centrar el formulario horizontalmente */
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-form label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 8px;
-}
+        form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
 
-form input,
-form select,
-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-}
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
 
-form button {
-    background-color: #f39c12;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        form button {
+            background-color: #f39c12;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-form button:hover {
-    background-color: #e68a06;
-}
+        form button:hover {
+            background-color: #e68a06;
+        }
 
-/* Estilo para los cuadros */
-.cuadro-container {
-    display: flex;
-    justify-content: center; /* Centrar el cuadro horizontalmente */
-    padding: 2px;
-    align-items: center; /* Centrar el cuadro verticalmente */
-}
+        /* Estilo para los cuadros */
+        .cuadro-container {
+            display: flex;
+            justify-content: center; /* Centrar el cuadro horizontalmente */
+            padding: 2px;
+            align-items: center; /* Centrar el cuadro verticalmente */
+        }
 
         .cuadro {
             width: 350px; /* Puedes ajustar este valor según tus necesidades */
@@ -245,21 +242,19 @@ form button:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
-/* Estilo para el formulario de reporte dentro del cuadro */
-.cuadro form {
-    margin-top: 20px;
-}
+        /* Estilo para el formulario de reporte dentro del cuadro */
+        .cuadro form {
+            margin-top: 20px;
+        }
 
-/* Estilo para el botón de reportar */
-.cuadro button {
-    background-color: #d9534f;
-}
+        /* Estilo para el botón de reportar */
+        .cuadro button {
+            background-color: #d9534f;
+        }
 
-.cuadro button:hover {
-    background-color: #c9302c;
-}
-
-
+        .cuadro button:hover {
+            background-color: #c9302c;
+        }
     </style>
 </head>
 <body>
@@ -283,46 +278,47 @@ form button:hover {
 
         <div class="cuadro-container">
             <div class="cuadro">
-        <h2>Formulario de Regalos</h2>
-        <form action="https://exuberant-bitter-glitter.glitch.me/submit-form" method="post">
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <h2>Formulario de Regalos</h2>
+                <form action="https://exuberant-bitter-glitter.glitch.me/submit-form" method="post">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="gift">Selecciona un regalo:</label>
-            <select id="gift" name="gift" required>
-                <option value="disneyplus">Disney PLUS</option>
-                <option value="starplus">Star PLUS</option>
-                <option value="paramountplus">Paramount PLUS</option>
-                <option value="crunchyroll">Crunchyroll Premium</option>
-                <option value="hbomax">Hbomax</option>
-            </select>
+                    <label for="gift">Selecciona un regalo:</label>
+                    <select id="gift" name="gift" required>
+                        <option value="disneyplus">Disney PLUS</option>
+                        <option value="starplus">Star PLUS</option>
+                        <option value="paramountplus">Paramount PLUS</option>
+                        <option value="crunchyroll">Crunchyroll Premium</option>
+                        <option value="hbomax">Hbomax</option>
+                    </select>
 
-            <button type="submit">Enviar</button>
+                    <button type="submit">Enviar</button>
 
-            <!-- Campo oculto para indicar si se debe mostrar el botón de reporte -->
-            <input type="hidden" id="showReportButton" name="showReportButton">
-        </form>
-          </div>
-      </div>
+                    <!-- Campo oculto para indicar si se debe mostrar el botón de reporte -->
+                    <input type="hidden" id="showReportButton" name="showReportButton">
+                </form>
+            </div>
+        </div>
+
         <!-- Formulario para reportar un regalo -->
-      <div class="cuadro-container">
-       <div class="cuadro">
-        <h2>Formulario de Reporte</h2>
-        <form action="javascript:void(0);">
-            <label for="reportedGift">Regalo a Reportar:</label>
-            <select id="reportedGift" name="reportedGift" required>
-                <option value="disneyplus">Disney PLUS</option>
-                <option value="starplus">Star PLUS</option>
-                <option value="paramountplus">Paramount PLUS</option>
-                <option value="crunchyroll">Crunchyroll Premium</option>
-                <option value="hbomax">Hbomax</option>
-              </div>
-          </div>
-            </select>
+        <div class="cuadro-container">
+            <div class="cuadro">
+                <h2>Formulario de Reporte</h2>
+                <form action="javascript:void(0);">
+                    <label for="reportedGift">Regalo a Reportar:</label>
+                    <select id="reportedGift" name="reportedGift" required>
+                        <option value="disneyplus">Disney PLUS</option>
+                        <option value="starplus">Star PLUS</option>
+                        <option value="paramountplus">Paramount PLUS</option>
+                        <option value="crunchyroll">Crunchyroll Premium</option>
+                        <option value="hbomax">Hbomax</option>
+                    </select>
 
-            <!-- Cambié el tipo de botón a "button" -->
-            <button type="button" onclick="reportNoResources(document.getElementById('reportedGift').value)">Reportar</button>
-        </form>
+                    <!-- Cambié el tipo de botón a "button" -->
+                    <button type="button" onclick="reportNoResources(document.getElementById('reportedGift').value)">Reportar</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>
