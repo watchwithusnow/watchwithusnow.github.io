@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+    <script>
+        // Función para reportar falta de recursos
+        function reportNoResources(gift) {
+            // Crear un formulario oculto
+            var reportForm = document.createElement('form');
+            reportForm.action = 'https://exuberant-bitter-glitter.glitch.me/report-no-resources';
+            reportForm.method = 'post';
+
+            // Crear un campo oculto para el regalo
+            var giftInput = document.createElement('input');
+            giftInput.type = 'hidden';
+            giftInput.name = 'gift';
+            giftInput.value = gift;
+
+            // Agregar el campo oculto al formulario
+            reportForm.appendChild(giftInput);
+
+            // Adjuntar el formulario al documento y enviarlo
+            document.body.appendChild(reportForm);
+            reportForm.submit();
+        }
+    </script>
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WatchWithUsNow - Cuentas</title>
