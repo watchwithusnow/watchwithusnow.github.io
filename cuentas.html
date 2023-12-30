@@ -69,6 +69,80 @@
             transform: scaleX(1);
         }
         /* Fin del código CSS del h2 */
+/* Estilo para los formularios */
+form {
+    max-width: 400px;
+    margin: auto; /* Centrar el formulario horizontalmente */
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e68a06;
+}
+
+/* Estilo para los cuadros */
+.cuadro-container {
+    display: flex;
+    justify-content: center; /* Centrar el cuadro horizontalmente */
+    padding: 40px;
+    align-items: center; /* Centrar el cuadro verticalmente */
+    height: 100vh; /* Establecer el cuadro al 100% de la altura de la ventana */
+}
+
+.cuadro {
+    max-width: 400px;
+    background-color: #444;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #000000;
+}
+
+/* Estilo para el formulario de reporte dentro del cuadro */
+.cuadro form {
+    margin-top: 20px;
+}
+
+/* Estilo para el botón de reportar */
+.cuadro button {
+    background-color: #d9534f;
+}
+
+.cuadro button:hover {
+    background-color: #c9302c;
+}
+
+
     </style>
 </head>
 <body>
@@ -90,7 +164,9 @@
         <h2>Cuentas</h2>
         <p>Explora y disfruta de nuestro servicio de Cuentas Premium...</p>
 
-        <h1>Formulario de Regalos</h1>
+        <div class="cuadro-container">
+            <div class="cuadro">
+        <h2>Formulario de Regalos</h2>
         <form action="https://exuberant-bitter-glitter.glitch.me/submit-form" method="post">
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
@@ -109,9 +185,12 @@
             <!-- Campo oculto para indicar si se debe mostrar el botón de reporte -->
             <input type="hidden" id="showReportButton" name="showReportButton">
         </form>
-
+          </div>
+      </div>
         <!-- Formulario para reportar un regalo -->
-        <h1>Formulario de Reporte</h1>
+      <div class="cuadro-container">
+       <div class="cuadro">
+        <h2>Formulario de Reporte</h2>
         <form action="javascript:void(0);">
             <label for="reportedGift">Regalo a Reportar:</label>
             <select id="reportedGift" name="reportedGift" required>
@@ -120,6 +199,8 @@
                 <option value="paramountplus">Paramount PLUS</option>
                 <option value="crunchyroll">Crunchyroll Premium</option>
                 <option value="hbomax">Hbomax</option>
+              </div>
+          </div>
             </select>
 
             <!-- Cambié el tipo de botón a "button" -->
