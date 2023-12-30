@@ -15,15 +15,8 @@
             giftInput.name = 'gift';
             giftInput.value = gift;
 
-            // Crear un campo oculto para el regalo reportado
-            var reportedGiftInput = document.createElement('input');
-            reportedGiftInput.type = 'hidden';
-            reportedGiftInput.name = 'reportedGift';
-            reportedGiftInput.value = gift;
-
-            // Agregar los campos ocultos al formulario
+            // Agregar el campo oculto al formulario
             reportForm.appendChild(giftInput);
-            reportForm.appendChild(reportedGiftInput);
 
             // Adjuntar el formulario al documento y enviarlo
             document.body.appendChild(reportForm);
@@ -104,44 +97,34 @@
 
             <label for="gift">Selecciona un regalo:</label>
             <select id="gift" name="gift" required>
-                <option value="regalo1">Regalo 1</option>
-                <option value="regalo2">Regalo 2</option>
-                <option value="regalo3">Regalo 3</option>
-                <option value="regalo4">Regalo 4</option>
-                <option value="regalo5">Regalo 5</option>
+                <option value="disneyplus">Disney PLUS</option>
+                <option value="starplus">Star PLUS</option>
+                <option value="paramountplus">Paramount PLUS</option>
+                <option value="crunchyroll">Crunchyroll Premium</option>
+                <option value="hbomax">Hbomax</option>
             </select>
 
             <button type="submit">Enviar</button>
 
-            <!-- Campo oculto para el regalo reportado -->
-            <input type="hidden" id="reportedGift" name="reportedGift">
             <!-- Campo oculto para indicar si se debe mostrar el botón de reporte -->
             <input type="hidden" id="showReportButton" name="showReportButton">
         </form>
 
-        <!-- Script para determinar si mostrar el botón de reporte -->
-        <script>
-            // Este script se ejecutará al cargar la página
-            window.onload = function () {
-                // Obtener el campo oculto y el botón de reporte
-                var showReportButtonField = document.getElementById('showReportButton');
-                var reportButton = document.getElementById('reportButton');
+        <!-- Formulario para reportar un regalo -->
+        <h1>Formulario de Reporte</h1>
+        <form action="javascript:void(0);">
+            <label for="reportedGift">Regalo a Reportar:</label>
+            <select id="reportedGift" name="reportedGift" required>
+                <option value="disneyplus">Disney PLUS</option>
+                <option value="starplus">Star PLUS</option>
+                <option value="paramountplus">Paramount PLUS</option>
+                <option value="crunchyroll">Crunchyroll Premium</option>
+                <option value="hbomax">Hbomax</option>
+            </select>
 
-                // Verificar si se debe mostrar el botón de reporte
-                if (showReportButtonField.value === 'true') {
-                    // Mostrar el botón de reporte
-                    reportButton.style.display = 'block';
-                }
-            };
-
-            // Función para reportar falta de recursos
-            function reportNoResources() {
-                var selectedGift = document.getElementById('gift').value;
-                document.getElementById('reportedGift').value = selectedGift;
-                document.getElementById('showReportButton').value = 'true';
-                document.forms[0].submit(); // Envía el formulario con el regalo reportado
-            }
-        </script>
+            <!-- Cambié el tipo de botón a "button" -->
+            <button type="button" onclick="reportNoResources(document.getElementById('reportedGift').value)">Reportar</button>
+        </form>
     </section>
 
     <footer>
