@@ -31,7 +31,13 @@ function saveData(data) {
             branch: 'main'
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Error al guardar los datos');
+        }
+    })
     .then(data => {
         console.log('Datos guardados correctamente:', data);
     })
