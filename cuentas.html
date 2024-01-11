@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<script type="text/javascript">
-  function abrirAnuncio() {
-    // Espera 3 segundos antes de abrir la nueva ventana
-    setTimeout(function() {
-      window.open('https://www.toprevenuegate.com/yn3t4fk6?key=b265622904b5d42e5bb1d70cfb7fce9d', '_blank');
-    }, 3000); // 3000 milisegundos = 3 segundos
-  }
-</script>
+    <script type="text/javascript">
+        function abrirAnuncio() {
+            // Espera 3 segundos antes de abrir la nueva ventana
+            setTimeout(function () {
+                window.open('https://www.toprevenuegate.com/yn3t4fk6?key=b265622904b5d42e5bb1d70cfb7fce9d', '_blank');
+            }, 3000); // 3000 milisegundos = 3 segundos
+        }
+    </script>
     <script>
-        // Función para reportar falta de recursos
-        function reportNoResources(gift) {
-            // Crear un formulario oculto
-            var reportForm = document.createElement('form');
-            reportForm.action = 'https://exuberant-bitter-glitter.glitch.me/report-no-resources';
-            reportForm.method = 'post';
-
-            // Crear un campo oculto para el regalo
-            var giftInput = document.createElement('input');
-            giftInput.type = 'hidden';
-            giftInput.name = 'gift';
-            giftInput.value = gift;
-
-            // Agregar el campo oculto al formulario
-            reportForm.appendChild(giftInput);
-
-            // Adjuntar el formulario al documento y enviarlo
-            document.body.appendChild(reportForm);
-            reportForm.submit();
+        function toggleExpandido(elemento) {
+            elemento.classList.toggle('expandido');
         }
     </script>
 
@@ -264,12 +248,45 @@
         .cuadro button:hover {
             background-color: #c9302c;
         }
+
+        .cuadro-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cuadro {
+            width: 150px;
+            height: 50px; /* Altura inicial */
+            background-color: #444;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            cursor: pointer;
+            transition: height 0.3s; /* Transición solo para la altura */
+            overflow: hidden; /* Oculta el contenido que se desborda */
+        }
+
+        .cuadro.expandido {
+            height: 150px; /* Altura al estar expandido */
+        }
+
+        .cuadro h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .cuadro p {
+            color: #ccc;
+            font-size: 12px;
+            margin: 0;
+            white-space: pre-line; /* Permite respetar los saltos de línea en el texto */
+        }
     </style>
-<script type='text/javascript' src='//pl21744521.toprevenuegate.com/97/db/ce/97dbce20954f6243e3f6db7889f0e615.js'></script>
 </head>
-<body>
-  <body onclick="abrirAnuncio();">
-<script type='text/javascript' src='//pl21744493.toprevenuegate.com/68/ed/06/68ed0661be579665a24bd79b0ec12bd0.js'></script>
+
+<body onclick="abrirAnuncio();">
     <a href="index.html">
         <header>
             <h2>WatchWithUsNow</h2>
@@ -284,73 +301,64 @@
         <a href="netflix.html">Netflix TV</a>
     </nav>
 
-    <section>
-        <h2>Cuentas</h2>
-        <p>Explora y disfruta de nuestro servicio de Cuentas Premium...</p>
-
-        <div class="cuadro-container">
-            <div class="cuadro">
-                <h2>Formulario de Regalos</h2>
-                <form action="https://exuberant-bitter-glitter.glitch.me/submit-form" method="post">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="gift">Selecciona un regalo:</label>
-                    <select id="gift" name="gift" required>
-                        <option value="disneyplus">Disney PLUS</option>
-                        <option value="starplus">Star PLUS</option>
-                        <option value="paramountplus">Paramount PLUS</option>
-                        <option value="crunchyroll">Crunchyroll Premium</option>
-                        <option value="hbomax">Hbomax</option>
-                    </select>
-
-                    <button type="submit">Enviar</button>
-
-                    <!-- Campo oculto para indicar si se debe mostrar el botón de reporte -->
-                    <input type="hidden" id="showReportButton" name="showReportButton">
-                </form>
-            </div>
+    <div class="cuadro-container">
+        <!-- Primer cuadro -->
+        <div class="cuadro" onclick="toggleExpandido(this)">
+            <h3>Disney PLUS</h3>
+            <p>
+1
+2
+3
+4
+</p>
         </div>
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '086968e63de47be22d86d601481bf2db',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/086968e63de47be22d86d601481bf2db/invoke.js"></scr' + 'ipt>');
-</script>
-
-
-        <!-- Formulario para reportar un regalo -->
-        <div class="cuadro-container">
-            <div class="cuadro">
-                <h2>Formulario de Reporte</h2>
-                <form action="javascript:void(0);">
-                    <label for="reportedGift">Regalo a Reportar:</label>
-                    <select id="reportedGift" name="reportedGift" required>
-                        <option value="disneyplus">Disney PLUS</option>
-                        <option value="starplus">Star PLUS</option>
-                        <option value="paramountplus">Paramount PLUS</option>
-                        <option value="crunchyroll">Crunchyroll Premium</option>
-                        <option value="hbomax">Hbomax</option>
-                    </select>
-
-                    <!-- Cambié el tipo de botón a "button" -->
-                    <button type="button" onclick="reportNoResources(document.getElementById('reportedGift').value)">Reportar</button>
-                </form>
-            </div>
+        <!-- Segundo cuadro -->
+        <div class="cuadro" onclick="toggleExpandido(this)">
+            <h3>Star PLUS</h3>
+            <p>
+1
+2
+3
+4
+</p>
         </div>
-    </section>
 
-<script async="async" data-cfasync="false" src="//pl21744508.toprevenuegate.com/12b6975cb6ab27a7db1803091043b1c2/invoke.js"></script>
-<div id="container-12b6975cb6ab27a7db1803091043b1c2"></div>
+        <div class="cuadro" onclick="toggleExpandido(this)">
+            <h3>Paramount PLUS</h3>
+            <p>
+1
+2
+3
+4
+</p>
+        </div>
+
+        <div class="cuadro" onclick="toggleExpandido(this)">
+            <h3>HBOMAX</h3>
+            <p>
+1
+2
+3
+4
+</p>
+        </div>
+
+        <div class="cuadro" onclick="toggleExpandido(this)">
+            <h3>VIX</h3>
+            <p>
+1
+2
+3
+4
+ </p>
+        </div>
+
+    </div>
 
     <footer>
         <p>&copy; 2023 WatchWithUsNow. Todos los derechos reservados.</p>
     </footer>
-  </body>
 </body>
+
 </html>
