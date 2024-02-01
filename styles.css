@@ -31,6 +31,10 @@ header {
     border-radius: 10px;
 }
 
+.centrar-contenido {
+    text-align: center;
+}
+
 a {
     color: #00bcd4;
     text-decoration: none;
@@ -38,10 +42,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-.centrar-contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Esto asegura que ocupe toda la altura de la sección */
 }
