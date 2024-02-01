@@ -19,9 +19,9 @@ header {
 }
 
 .logo img {
-    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 100px;
     margin-right: 10px;
-    border-radius: 50%; /* Añade borde redondeado al logo */
+    border-radius: 50%;
 }
 
 .regalos-section {
@@ -33,6 +33,52 @@ header {
 
 .centrar-contenido {
     text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00bcd4;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#contenedorBoton {
+    text-align: center;
+}
+
+#botonEnviar {
+    background-color: #00bcd4;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#botonEnviar:hover {
+    background-color: #007a8b;
+}
+
+#textoApagado {
+    color: #ff3333;
+    font-style: italic;
 }
 
 a {
